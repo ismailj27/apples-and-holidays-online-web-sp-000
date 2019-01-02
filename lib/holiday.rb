@@ -75,9 +75,9 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   
   holiday_hash.each do |season, holidays|
-    puts "#{season.capitalize}:"
+    puts "#{season.to_s.capitalize}:"
     holidays.each do |a_holiday, supplies|
-      a_holiday = a_holiday.to_s
+      puts "  {a_holiday.to_s.split("_").map {|word| word.capitalize }.join(" ") }: #{ "
       if a_holiday.include? "_"
         a_holiday = a_holiday.split("_")
         temp_array = []
