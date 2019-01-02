@@ -77,7 +77,7 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays|
     puts "#{season.to_s.capitalize}:"
     holidays.each do |a_holiday, supplies|
-      puts "  {a_holiday.to_s.split("_").map {|word| word.capitalize }.join(" ") }: #{ "
+      puts "  {a_holiday.to_s.split("_").map {|word| word.capitalize }.join(" ") }: #{supplies.join(", ")} "
       if a_holiday.include? "_"
         a_holiday = a_holiday.split("_")
         temp_array = []
@@ -101,7 +101,7 @@ def all_supplies_in_holidays(holiday_hash)
       end
       puts "  #{a_holiday}: #{supplies_array.join(", ")}"
     end
-  end
+ end
   
 end
 
